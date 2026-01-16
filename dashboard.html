@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Spendly | Dashboard</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <h2 class="logo">Spendly</h2>
+    <nav>
+      <a class="active">Dashboard</a>
+      <a>Add Expense</a>
+      <a>Budget</a>
+      <a>Analytics</a>
+    </nav>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main">
+
+    <!-- Header -->
+    <header class="header">
+      <h1>My Finances</h1>
+      <button class="btn-primary">+ Add Expense</button>
+    </header>
+
+    <!-- Summary Cards -->
+    <section class="cards">
+      <div class="card">
+        <p>Income</p>
+        <h2>₹24,500</h2>
+      </div>
+
+      <div class="card">
+        <p>Expenses</p>
+        <h2>₹13,240</h2>
+      </div>
+
+      <div class="card">
+        <p>Balance</p>
+        <h2>₹11,260</h2>
+      </div>
+
+      <div class="card">
+        <p>Savings</p>
+        <h2>₹7,500</h2>
+      </div>
+    </section>
+
+    <!-- Charts -->
+    <section class="charts">
+      <div class="chart-card">
+        <h3>Monthly Expenses</h3>
+        <canvas id="expenseChart"></canvas>
+      </div>
+
+      <div class="chart-card">
+        <h3>Income vs Expense</h3>
+        <canvas id="lineChart"></canvas>
+      </div>
+    </section>
+    <section class="card">
+  <h3>Recent Expenses</h3>
+  <ul id="expenseList"></ul>
+</section>
+<section class="card glass">
+  <h3>Monthly Budgets</h3>
+
+  <div class="budget">
+    <span>Food</span>
+    <span>₹1200 / ₹3000</span>
+    <div class="progress">
+      <div class="progress-bar food"></div>
+    </div>
+  </div>
+
+  <div class="budget">
+    <span>Transport</span>
+    <span>₹800 / ₹1500</span>
+    <div class="progress">
+      <div class="progress-bar travel"></div>
+    </div>
+  </div>
+
+  <div class="budget">
+    <span>Shopping</span>
+    <span>₹600 / ₹2000</span>
+    <div class="progress">
+      <div class="progress-bar shopping"></div>
+    </div>
+  </div>
+</section>
+
+
+<script type="module" src="js/dashboard.js"></script>
+
+
+  </main>
+
+  <script src="js/charts.js"></script>
+</body>
+</html>
+
