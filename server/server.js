@@ -5,6 +5,9 @@ import connectDB from "./config/db.js";
 import expenseroutes from "./routes/expenseroutes.js";
 import authRoutes from "./routes/authRoutes.js";
 
+const router = express.Router();
+console.log("Auth routes loaded");
+
 dotenv.config();
 connectDB();
 
